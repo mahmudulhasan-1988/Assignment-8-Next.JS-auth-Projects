@@ -17,12 +17,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="en" data-theme="light"
       className={`${OutfitFont.className}  h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
-        {children}
+        <main className="max-w-7xl mx-auto w-full">
+
+          {children}
+        </main>
+       
         <Footer></Footer>
         </body>
     </html>
