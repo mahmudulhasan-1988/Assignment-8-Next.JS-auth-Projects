@@ -1,37 +1,110 @@
-import { Button } from "@heroui/react";
-import Link from "next/link";
+"use client";
 
-const Banner = () => {
+import { useEffect, useState } from "react";
+import Image from "next/image";
+
+const BannerSlider = () => {
+  const banners = [
+    {
+      id: 1,
+      image: "/Banner-01.jpg",
+      title: "Modern Ceramic Tiles",
+    },
+    {
+      id: 2,
+      image: "/Banner-02.jpg",
+      title: "Premium Ceramic Wall Tiles",
+    },
+    {
+      id: 3,
+      image: "/Banner-03.jpg",
+      title: "Stylish Marble Floor Tiles",
+    },
+    {
+      id: 4,
+      image: "/Banner-04.jpeg",
+      title: "White Seamless Texture Wall Tiles",
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  // 🔥 Auto Slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % banners.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // 🔥 Next / Prev
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % banners.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) =>
+      prev === 0 ? banners.length - 1 : prev - 2
+    );
+  };
+
   return (
-    <div className="bg-[url('https://img.freepik.com/premium-photo/marble-texture-background-natural-breccia-marble-tiles-ceramic-wall-tiles-floor-tiles-marble-stone-texture-digital-wall-tiles_979495-155181.jpg?semt=ais_hybrid&w=740&q=80')] 
-    h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl mb-10">
-      {/* Overlay */}
-      <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
-        <div className="max-w-7xl mx-auto px-6 text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
-            Find your perfect Tiles
-          </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-2xl text-gray-200">
-            Our company has a variety of high-quality domestic and foreign Tiles.
-          </p>
+    <div className="relative w-full h-[400px] overflow-hidden rounded-2xl">
 
-          <div className="flex gap-4">
-            <Link href="#">
-                <Button variant="outline" className="text-white">
-                Talk To Agent
-              </Button>
-            </Link>
+      {/* 🔥 Slides */}
+      {banners.map((banner, index) => (
+        <div
+          key={banner.id}
+          className={`absolute w-full h-full transition-opacity duration-00 ${
+            index === current ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Image
+            src={banner.image}
+            alt={banner.title}
+            fill
+            className="object-cover"
+          />
 
-            <Link href="/pricing">
-              <Button variant="outline" className="text-white">
-                See Our Contact
-              </Button>
-            </Link>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h2 className="text-white text-3xl font-bold">
+              {banner.title}
+            </h2>
           </div>
         </div>
+      ))}
+
+      {/* 🔥 Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-5 top-1/2 -translate-y-1/2 bg-white px-3 py-2 rounded"
+      >
+        ◀
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-5 top-1/2 -translate-y-1/2 bg-white px-3 py-2 rounded"
+      >
+        ▶
+      </button>
+
+      {/* 🔥 Dots */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+        {banners.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full cursor-pointer ${
+              index === current ? "bg-white" : "bg-gray-400"
+            }`}
+          ></div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Banner;
+export default BannerSlider;
