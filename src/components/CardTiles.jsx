@@ -5,7 +5,7 @@ import React from 'react';
 import { MdShoppingCart } from 'react-icons/md';
 
 const CardTiles = ({ cardView }) => {
-    console.log(cardView);
+    // console.log(cardView);
     return (
 
 
@@ -29,19 +29,19 @@ const CardTiles = ({ cardView }) => {
                 <div className='border-t border-gray-300'></div>
                 <div className=" flex items-center justify-between mt-3">
                     <div className=' card-actions '>
-                    <button className='btn btn-primary items'>
-                        <MdShoppingCart />Buy Now
-                    </button>
-                </div>
+                        <button className='btn btn-primary items'>
+                            <MdShoppingCart />Buy Now
+                        </button>
+                    </div>
                     <div className="badge">{cardView.price} {cardView.currency}</div>
                 </div>
-                
+
                 <div>
-                     <Link href={`/tiles/${cardView.id}`}>
-              <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700">
-                View Details
-              </button>
-            </Link>
+                    <Link href={`/tiles/${cardView.id}`}>
+                        <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700">
+                            View Details
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

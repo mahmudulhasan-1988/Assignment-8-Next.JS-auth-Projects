@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const Banner = () => {
   return (
-    <div className="bg-[url('https://img.freepik.com/premium-photo/marble-texture-background-natural-breccia-marble-tiles-ceramic-wall-tiles-floor-tiles-marble-stone-texture-digital-wall-tiles_979495-155181.jpg?semt=ais_hybrid&w=740&q=80')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl mb-10">
+    <div className="bg-[url('https://img.freepik.com/premium-photo/marble-texture-background-natural-breccia-marble-tiles-ceramic-wall-tiles-floor-tiles-marble-stone-texture-digital-wall-tiles_979495-155181.jpg?semt=ais_hybrid&w=740&q=80')] 
+    h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl mb-10">
       {/* Overlay */}
       <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
         <div className="max-w-7xl mx-auto px-6 text-white">

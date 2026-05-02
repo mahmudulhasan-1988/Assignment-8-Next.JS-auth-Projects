@@ -2,6 +2,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AllCardPage from "./all-tiles-card/page";
 
 const OutfitFont = Outfit({
     subsets: ["latin"],
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
         <main className="max-w-7xl mx-auto w-full">
-
+        
           {children}
         </main>
        
