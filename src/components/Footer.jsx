@@ -62,12 +62,6 @@ const Footer = () => {
                             );
                         })}
                     </div>
-                    {/* <div className="flex gap-4 mt-4 text-xl">
-            <a href="#" className="hover:text-green-600"><FaFacebook /></a>
-            <a href="#" className="hover:text-green-600"><FaTwitter /></a>
-            <a href="#" className="hover:text-green-600"><FaGithub /></a>
-            <a href="#" className="hover:text-green-600"><FaLinkedin /></a>
-          </div> */}
                 </div>
             </div>
 

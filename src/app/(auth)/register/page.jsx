@@ -59,8 +59,8 @@ const handleGoogleSignin = async()=>{
 
 
     return (
-        <div className=' container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 mt-10'>
-            <div className=' p-4 rounded-xl bg-white'>
+        <div className=' container mx-auto min-h-[80vh] flex justify-center items-center  mt-10'>
+            <div className=' p-10 shadow-2xl rounded-xl '>
                 <h2 className='font-bold text-3xl text-center mb-4'>Register your Account</h2>
 
 

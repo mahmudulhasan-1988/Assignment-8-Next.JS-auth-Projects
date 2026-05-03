@@ -31,7 +31,7 @@ const TilesDetailsPage = async ({ params }) => {
                         <button className='btn btn-primary items'>
                                 <MdShoppingCart />Buy Now
                             </button>
-                            <div className="bg-amber-200 py-2 px-2 rounded-full font-bold">{tile.price} {tile.currency}</div>
+                            <div className=" bg-green-500 py-2 px-2 rounded-full font-bold">{tile.price} {tile.currency}</div>
                     </div>
                 </div>
             </div>

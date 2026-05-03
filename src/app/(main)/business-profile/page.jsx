@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BusinessProfile = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="">
 
     
       <div className="relative h-[400px] mb-10 mt-10">
@@ -42,47 +42,47 @@ const BusinessProfile = () => {
       </div>
 
       
-      <div className="bg-white py-10">
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="py-10">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">Our Services</h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-6 shadow rounded-xl">
+          <div className="grid md:grid-cols-3 gap-10 shadow-2xl">
+            <div className="p-6 shadow-lg rounded-xl ">
               <h3 className="font-bold text-xl">Floor Tiles</h3>
               <p className="text-gray-400 mt-2">
                 We offer a wide range of high-quality floor tiles designed for durability and style. Our floor tiles are suitable for living rooms, bedrooms, kitchens, and outdoor areas. They are scratch-resistant, easy to clean, and available in various sizes, textures, and finishes such as matte, glossy, and anti-slip surfaces.
               </p>
             </div>
 
-            <div className="p-6 shadow rounded-xl">
+            <div className="p-6 shadow-lg rounded-xl">
               <h3 className="font-bold text-xl">Wall Tiles</h3>
               <p className="text-gray-400 mt-2">
                 Our wall tiles are crafted to enhance the beauty of interior and exterior walls. Ideal for bathrooms, kitchens, and feature walls, these tiles come in modern, classic, and custom designs. They are moisture-resistant, easy to maintain, and perfect for creating elegant wall aesthetics.
               </p>
             </div>
 
-            <div className="p-6 shadow rounded-xl">
+            <div className="p-6 shadow-lg rounded-xl">
               <h3 className="font-bold text-xl">Commercial Tiles</h3>
               <p className="text-gray-400 mt-2">
                 We provide heavy-duty commercial tiles specially designed for high-traffic areas such as offices, shopping malls, hotels, and public spaces. These tiles are highly durable, slip-resistant, and built to withstand wear and tear while maintaining a professional and stylish look.
               </p>
             </div>
 
-            <div className="p-6 shadow rounded-xl">
+            <div className="p-6 shadow-lg rounded-xl">
               <h3 className="font-bold text-xl">Decorative & Designer Tiles</h3>
               <p className="text-gray-400 mt-2">
                 Our decorative and designer tiles are perfect for adding a unique and artistic touch to any space. Available in a variety of patterns, colors, and textures, these tiles are ideal for accent walls, backsplashes, and interior design projects that require creativity and elegance.
               </p>
             </div>
 
-            <div className="p-6 shadow rounded-xl">
+            <div className="p-6 shadow-lg rounded-xl">
               <h3 className="font-bold text-xl">Porcelain Tiles</h3>
               <p className="text-gray-400 mt-2">
                 Our decorative and designer tiles are perfect for adding a unique and artistic touch to any space. Available in a variety of patterns, colors, and textures, these tiles are ideal for accent walls, backsplashes, and interior design projects that require creativity and elegance.
               </p>
             </div>
 
-            <div className="p-6 shadow rounded-xl">
+            <div className="p-6 shadow-lg rounded-xl">
               <h3 className="font-bold text-xl">Tile Installation Support & Consultation</h3>
               <p className="text-gray-400 mt-2">
                 We provide professional guidance and consultation to help clients choose the right tiles for their projects. Our team also offers installation support, ensuring proper tile placement, alignment, and finishing for a flawless result. We focus on quality workmanship and customer satisfaction.

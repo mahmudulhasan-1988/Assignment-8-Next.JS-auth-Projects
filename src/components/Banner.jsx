@@ -30,7 +30,7 @@ const BannerSlider = () => {
 
   const [current, setCurrent] = useState(0);
 
-  // ✅ Auto Slide
+  // Auto Slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % banners.length);
@@ -39,12 +39,12 @@ const BannerSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // ✅ Next Slide
+  // Next Slide
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % banners.length);
   };
 
-  // ✅ Fixed Prev Slide
+  // Fixed Prev Slide
   const prevSlide = () => {
     setCurrent((prev) =>
       prev === 0 ? banners.length - 1 : prev - 1

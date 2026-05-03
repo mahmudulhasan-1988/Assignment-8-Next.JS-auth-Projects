@@ -42,8 +42,8 @@ console.log(res, error);
 console.log(watch ("email"));
 console.log(watch ("password"));
     return (
-        <div className=' container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 mt-8'>
-            <div className=' p-4 rounded-xl bg-white'>
+        <div className=' container mx-auto min-h-[80vh] flex justify-center items-center  mt-8'>
+            <div className=' p-10 rounded-xl shadow-2xl'>
                 <h2 className='font-bold text-3xl text-center mb-4'>Login your Account</h2>
 
 
