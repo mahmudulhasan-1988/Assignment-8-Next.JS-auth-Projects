@@ -15,23 +15,23 @@ const TilesDetailsPage = async ({ params }) => {
     console.log(tile);
 
     return (
-            <div className="card card-side bg-base-100 shadow-sm mt-10">
+            <div className="card card-side  shadow-sm mt-10">
                 <figure>
                      <Image
                         src={tile.image}
-                        width={300}
-                        height={250}
+                        width={800}
+                        height={600}
                         alt={tile.title} className=' rounded-lg  mb-10 '
                     />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">{tile.title}</h2>
+                    <h2 className="card-title text-2xl font-bold">{tile.title}</h2>
                     <p>{tile.details}</p>
                     <div className="card-actions justify-between items-center">
                         <button className='btn btn-primary items'>
                                 <MdShoppingCart />Buy Now
                             </button>
-                            <div className="badge">{tile.price} {tile.currency}</div>
+                            <div className="bg-amber-200 py-2 px-2 rounded-full font-bold">{tile.price} {tile.currency}</div>
                     </div>
                 </div>
             </div>
