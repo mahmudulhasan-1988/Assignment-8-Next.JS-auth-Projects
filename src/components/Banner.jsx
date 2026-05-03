@@ -50,15 +50,14 @@ const BannerSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden rounded-2xl">
+    <div className="relative w-full  h-[400px] overflow-hidden rounded-2xl mt-10">
 
       {/* 🔥 Slides */}
       {banners.map((banner, index) => (
         <div
           key={banner.id}
-          className={`absolute w-full h-full transition-opacity duration-00 ${
-            index === current ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute w-full h-full transition-opacity duration-00 ${index === current ? "opacity-100" : "opacity-0"
+            }`}
         >
           <Image
             src={banner.image}
@@ -97,9 +96,8 @@ const BannerSlider = () => {
           <div
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              index === current ? "bg-white" : "bg-gray-400"
-            }`}
+            className={`w-3 h-3 rounded-full cursor-pointer ${index === current ? "bg-white" : "bg-gray-400"
+              }`}
           ></div>
         ))}
       </div>
