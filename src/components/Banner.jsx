@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 
 const BannerSlider = () => {
   const banners = [
@@ -29,7 +30,7 @@ const BannerSlider = () => {
 
   const [current, setCurrent] = useState(0);
 
-  // 🔥 Auto Slide
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % banners.length);
@@ -38,7 +39,7 @@ const BannerSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // 🔥 Next / Prev
+
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % banners.length);
   };
@@ -52,7 +53,7 @@ const BannerSlider = () => {
   return (
     <div className="relative w-full  h-[400px] overflow-hidden rounded-2xl mt-10">
 
-      {/* 🔥 Slides */}
+   
       {banners.map((banner, index) => (
         <div
           key={banner.id}
@@ -67,7 +68,7 @@ const BannerSlider = () => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
             <h2 className="text-white text-3xl font-bold">
               {banner.title}
             </h2>
@@ -75,22 +76,22 @@ const BannerSlider = () => {
         </div>
       ))}
 
-      {/* 🔥 Buttons */}
+    
       <button
         onClick={prevSlide}
-        className="absolute left-5 top-1/2 -translate-y-1/2 bg-white px-3 py-2 rounded"
+        className="absolute left-5 top-1/2 -translate-y-1/2 px-3 py-2 rounded text-4xl"
       >
-        ◀
+        <RiArrowLeftSLine />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-5 top-1/2 -translate-y-1/2 bg-white px-3 py-2 rounded"
+        className="absolute right-5 top-1/2 -translate-y-1/2 px-3 py-2 rounded text-4xl"
       >
-        ▶
+        <RiArrowRightSLine />
       </button>
 
-      {/* 🔥 Dots */}
+    
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
         {banners.map((_, index) => (
           <div

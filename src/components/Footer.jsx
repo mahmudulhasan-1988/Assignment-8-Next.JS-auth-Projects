@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -14,12 +15,18 @@ const Footer = () => {
 
 
     return (
-        <footer className="border-t border-gray-300 text-center py-4 text-sm">
-            <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+        <footer className="border-t border-gray-300 text-center py-4 text-sm mt-10">
+            <div className=" w-full max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 bg-linear-to-r from-transparent via-purple-300 to-transparent dark:via-white/10">
 
                 {/* Brand */}
-                <div>
-                    <h2 className="text-2xl font-bold">HASAN TILES GALLERY</h2>
+                <div className="">
+                    <Image
+                                src="/hasan.png"
+                                alt="logo"
+                                width={250}
+                                height={150} 
+                              />
+                    {/* <h2 className="text-2xl font-bold">HASAN TILES GALLERY</h2> */}
                     <p className="mt-3 text-sm">
                         Our company has a variety of high-quality domestic and foreign Tiles.
                     </p>
@@ -39,9 +46,9 @@ const Footer = () => {
                 {/* Contact */}
                 <div className="text-left">
                     <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
-                    <p>Email: engr.mharif24@gmail.com</p>
-                    <p>Phone: +880 01811562080</p>
-                    <p>Location: Jamirdia, Valuka, Mymensingh, Bangladesh</p>
+                    <p>📧 Email: engr.mharif24@gmail.com</p>
+                    <p>📞 Phone: +880 01811562080</p>
+                    <p>📍Location: Jamirdia, Valuka, Mymensingh, Bangladesh</p>
 
                     {/* Social Icons */}
 

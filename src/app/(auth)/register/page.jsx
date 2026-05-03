@@ -3,11 +3,28 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaEye } from 'react-icons/fa';
+import { FaEye, FaGithub, FaGoogle } from 'react-icons/fa';
 import { RiEyeCloseLine } from 'react-icons/ri';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 const RegisterPage = () => {
+
+const handleGoogleSignin = async()=>{
+        const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  console.log(data, "google");
+    }
+    const handleGithubSignin = async()=>{
+        const data = await authClient.signIn.social({
+    provider: "github",
+  });
+  console.log(data, "github");
+    }
+
+
+
 
     const { register,
         handleSubmit, watch, formState: { errors } } = useForm()
@@ -32,17 +49,17 @@ const RegisterPage = () => {
         });
         console.log(res, error);
         if (error) {
-            alert(error.message)
+            toast.error(error.message)
         }
 
         if (res) {
-            alert("SignUp Successful")
+            toast.success("SignUp Successful")
         }
     };
 
 
     return (
-        <div className=' container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 mt-8'>
+        <div className=' container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 mt-10'>
             <div className=' p-4 rounded-xl bg-white'>
                 <h2 className='font-bold text-3xl text-center mb-4'>Register your Account</h2>
 
@@ -82,6 +99,15 @@ const RegisterPage = () => {
                     </fieldset>
                     <button className="btn w-full bg-slate-800 text-white">Register</button>
                 </form>
+                {/* google & Github */}
+                   <div>
+                            <div className='flex flex-col gap-2 mt-5'>
+                                <button className='btn border-blue-500 text-blue-500' onClick={handleGoogleSignin}><FaGoogle />
+                                    Login with Google</button>
+                                <button className='btn border-zinc-500 ' onClick={handleGithubSignin}><FaGithub />
+                                    Login with github</button>
+                            </div>
+                        </div>
 
             </div>
         </div>

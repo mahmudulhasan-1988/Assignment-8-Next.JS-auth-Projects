@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { RiEyeCloseLine } from 'react-icons/ri';
+import { toast } from 'react-toastify';
 
 
 const LoginPage = () => {
@@ -30,11 +31,11 @@ const handleLoginFunc = async (data)=>{
 console.log(res, error);
 
    if (error) {
-            alert(error.message)
+            toast.error(error.message)
         }
 
         if (res) {
-            alert("Signin Successful")
+            toast.success("Signin Successful")
         }
 }
 

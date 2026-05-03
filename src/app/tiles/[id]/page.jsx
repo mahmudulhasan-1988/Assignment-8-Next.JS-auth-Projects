@@ -27,7 +27,7 @@ const TilesDetailsPage = async({params}) => {
             <p className=''>{tile.description}</p>
             </div>
            </div>
-            <Link href={`/profile/${tile.id}`}>
+            <Link href={`/business-profile/${tile.id}`}>
                         <button className='btn bg-green-600 hover:bg-gray-400 hover:text-white text-white mt-5'>See Our the Profile<BsArrowRight></BsArrowRight></button>
                     </Link>
         </div>
