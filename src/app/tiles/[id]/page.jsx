@@ -19,14 +19,14 @@ const TilesDetailsPage = async ({ params }) => {
                 <figure>
                      <Image
                         src={tile.image}
-                        width={800}
-                        height={800}
+                        width={300}
+                        height={250}
                         alt={tile.title} className=' rounded-lg  mb-10 '
                     />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{tile.title}</h2>
-                    <p>{tile.description}</p>
+                    <p>{tile.details}</p>
                     <div className="card-actions justify-between items-center">
                         <button className='btn btn-primary items'>
                                 <MdShoppingCart />Buy Now
