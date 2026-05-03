@@ -2,7 +2,9 @@ import React from 'react';
 import CardTiles from './CardTiles';
 
 const TopViewCard = async () => {
-    const res = await fetch('https://assignment-8-next-js-auth-projects.vercel.app/data.json');
+    const res = await fetch('https://assignment-8-next-js-auth-projects.vercel.app/data.json', {
+        cache: "no-store"
+    });
     const tilesData = await res.json();
     const tiles = tilesData?.tiles || [];
     const viewData = tiles.slice(0, 9);
