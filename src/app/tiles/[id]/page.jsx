@@ -7,9 +7,7 @@ import { MdShoppingCart } from 'react-icons/md';
 
 const TilesDetailsPage = async ({ params }) => {
     const { id } = await params;
-    const res = await fetch('https://assignment-8-next-js-auth-projects.vercel.app/data.json', {
-        cache: 'no-store'
-    });
+    const res = await fetch('https://assignment-8-next-js-auth-projects.vercel.app/data.json');
     const tilesData = await res.json();
     const tile = tilesData.tiles.find(t => t.id === id);
     console.log(tile);
