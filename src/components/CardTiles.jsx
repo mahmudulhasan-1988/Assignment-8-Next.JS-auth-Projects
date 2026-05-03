@@ -27,15 +27,6 @@ const CardTiles = ({ cardView }) => {
                 </h2>
                 <p>{cardView.description}</p>
                 <div className='border-t border-gray-300'></div>
-                <div className=" flex items-center justify-between mt-3">
-                    <div className=' card-actions '>
-                        <button className='btn btn-primary items'>
-                            <MdShoppingCart />Buy Now
-                        </button>
-                    </div>
-                    <div className="badge">{cardView.price} {cardView.currency}</div>
-                </div>
-
                 <div>
                     <Link href={`/tiles/${cardView.id}`}>
                         <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700">
