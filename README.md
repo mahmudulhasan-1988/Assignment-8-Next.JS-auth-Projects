@@ -62,34 +62,13 @@ react-icons
 
 ---
 
-## 📂 Project Structure
-
-```
-src/
- ├── app/
- ├── components/
- │    ├── Navbar.jsx
- │    ├── NavLink.jsx
- ├── data/
- │    └── tiles.json
- ├── lib/
- │    └── auth-client.js
-```
-
----
 
 ## ⚙️ Installation & Setup
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/hasan-tiles-gallery.git
-```
-
-Go to project folder:
-
-```bash
-cd hasan-tiles-gallery
+git clone https://github.com/mahmudulhasan-1988/Assignment-8-Next.JS-auth-Projects
 ```
 
 Install dependencies:
