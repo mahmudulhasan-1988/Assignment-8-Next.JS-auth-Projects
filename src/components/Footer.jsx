@@ -15,8 +15,8 @@ const Footer = () => {
 
 
     return (
-        <footer className="border-t border-gray-300 text-center py-4 text-sm mt-10">
-            <div className=" w-full max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 bg-linear-to-r from-transparent via-purple-300 to-transparent dark:via-white/10">
+        <footer className="border-t border-gray-300  text-center  text-sm mt-10">
+            <div className=" w-full max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 bg-linear-to-r from-transparent via-orange-100 to-transparent dark:via-white/10">
 
                 {/* Brand */}
                 <div className="">
@@ -26,7 +26,7 @@ const Footer = () => {
                                 width={250}
                                 height={150} 
                               />
-                    {/* <h2 className="text-2xl font-bold">HASAN TILES GALLERY</h2> */}
+                    
                     <p className="mt-3 text-sm">
                         Our company has a variety of high-quality domestic and foreign Tiles.
                     </p>

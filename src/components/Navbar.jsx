@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 mt-5">
+    <div className="container shadow mx-auto px-4 py-5 mt-5 bg-linear-to-r from-transparent via-orange-100 to-transparent dark:via-white/10">
       <div className="flex justify-between items-center">
 
         {/* Logo */}
