@@ -41,7 +41,7 @@ const Navbar = () => {
         <ul className="hidden md:flex items-center gap-6 font-semibold">
           <li><NavLink href="/">Home</NavLink></li>
           <li><NavLink href="/all-tiles-card">All Tiles</NavLink></li>
-          <li><NavLink href="/business-profile">Profile</NavLink></li>
+          <li><NavLink href="/business-profile">My-Profile</NavLink></li>
         </ul>
 
         {/* Right Side */}
