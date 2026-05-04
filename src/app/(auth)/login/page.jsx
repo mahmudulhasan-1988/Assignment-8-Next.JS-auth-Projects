@@ -16,8 +16,8 @@ const {register, handleSubmit, watch, formState: {errors}} = useForm()
 
 
 const handleLoginFunc = async (data)=>{
-    // e.preventDefault()
-    console.log(data, "data");
+    
+    // console.log(data, "data");
 
     const { data: res, error } = await authClient.signIn.email({
     email: data.email, // required
@@ -25,9 +25,7 @@ const handleLoginFunc = async (data)=>{
     rememberMe: true,
     callbackURL: "/",
 });
-// e.preventDefault();
-// const email = e.target.email.value;
-// const password = e.target.password.value;
+
 console.log(res, error);
 
    if (error) {

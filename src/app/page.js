@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <div>
       <BannerSlider />
-      {/* <Banner></Banner> */}
       <TopViewCard></TopViewCard>
     </div>
   );

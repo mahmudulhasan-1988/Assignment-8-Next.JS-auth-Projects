@@ -4,7 +4,7 @@ import React from 'react';
 const AllCardPage = async() => {
     const res = await fetch('https://assignment-8-next-js-auth-projects.vercel.app/data.json');
     const tilesData = await res.json();
-    // console.log(tilesData);
+    
     return (
         <div>
              <h1 className='text-2xl font-bold my-5'>All Tiles List</h1>
